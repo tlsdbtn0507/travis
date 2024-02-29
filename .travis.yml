@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start creating an image with dockerfile"
-  - docker build -f Dockerfile.dev -t yusu/react ./
+  - docker build -f Dockerfile -t yusu/react ./
 
 script:
   - docker run -e CI=true yusu/react npm run test -- --coverage
